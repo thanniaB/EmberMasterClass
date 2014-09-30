@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LessonApp</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/lesson-app.css">
+  </head>
+  <body>
+    <script>
+      window.LessonAppENV = {{ENV}};
+      window.EmberENV = window.LessonAppENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/lesson-app.js"></script>
+    <script>
+      window.LessonApp = require('lesson-app/app')['default'].create(LessonAppENV.APP);
+    </script>
+  </body>
+</html>
